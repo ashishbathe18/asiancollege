@@ -1,0 +1,91 @@
+.life-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.life-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark overlay for better text visibility */
+.life-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.life-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.life-overlay h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+}
+/* ===== Facilities Section ===== */
+
+.life-page {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.life-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #8b0000;
+  margin-bottom: 30px;
+}
+
+.life-section {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.life-section img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.life-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.life-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .life-section {
+    flex-direction: column;
+  }
+
+  .life-section img {
+    width: 100%;
+    height: auto;
+  }
+}

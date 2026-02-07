@@ -1,0 +1,272 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ================= HERO SECTION ================= */
+
+.contact-hero {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeZoom 1.2s ease;
+}
+
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.overlay {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.3)
+  );
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.overlay h1 {
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: 1px;
+  animation: slideLeft 1s ease;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+  background-color: #f00101;
+  color: #ffffff;
+  padding: 14px 80px;
+  font-size: 14px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= LEFT PANEL ================= */
+
+.contact-info {
+  width: 35%;
+  background: linear-gradient(135deg, #fdeee3, #fff6f0);
+  padding: 35px;
+  border-radius: 12px;
+  border-top: 5px solid #e11d48;
+}
+
+.contact-info h2 {
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.contact-info p {
+  margin-bottom: 18px;
+  color: #0033cc;
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+}
+
+/* ================= RIGHT FORM ================= */
+
+.contact-form {
+  width: 65%;
+}
+
+.contact-form label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1f3a40;
+  box-shadow: 0 0 0 2px rgba(31, 58, 64, 0.15);
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row div {
+  width: 100%;
+}
+
+/* ================= CAPTCHA ================= */
+
+.captcha-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.captcha-box {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+/* ================= BUTTON ================= */
+
+.contact-form button {
+  margin-top: 28px;
+  padding: 14px;
+  width: 240px;
+  background: #1f3a40;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.contact-form button:hover {
+  background: #dc2626;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+}
+
+/* ================= MAP ================= */
+
+.map-container {
+  max-width: 1200px;
+  height: 450px;
+  margin: 60px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* =================================================
+   📱 MOBILE (max-width: 768px)
+================================================= */
+
+@media (max-width: 768px) {
+  .overlay {
+    padding-left: 20px;
+  }
+
+  .breadcrumb {
+    padding: 12px 20px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 20px;
+    margin: 40px 16px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .map-container {
+    height: 300px;
+    margin: 40px 16px;
+  }
+}
+
+/* =================================================
+   📱 SMALL MOBILE (max-width: 480px)
+================================================= */
+
+@media (max-width: 480px) {
+  .contact-hero {
+    height: 45vh;
+  }
+
+  .contact-info h2 {
+    font-size: 20px;
+  }
+
+  .captcha-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .captcha-box {
+    font-size: 24px;
+  }
+}

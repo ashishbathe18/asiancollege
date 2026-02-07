@@ -1,0 +1,138 @@
+/* SECTION */
+.placement-section {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #f7f7f7, #ffffff);
+}
+
+.placement-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TITLE */
+.placement-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.placement-title {
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 900;
+  color: #ff0000;
+}
+
+.placement-subtitle {
+  font-size: 16px;
+  color: #666;
+}
+
+/* 🔥 RESPONSIVE GRID */
+.placement-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .placement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .placement-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.placement-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px 16px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.placement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* BADGE */
+.placement-OrangeITech-head {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #ff0000, #ff0000);
+  color: #fff;
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* IMAGE */
+.placement-img {
+  width: 140px;
+  height: 160px;
+  margin: 28px auto 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e3e3e3;
+}
+
+.placement-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.placement-card h5 {
+  color: #ff0000;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.placement-card p {
+  font-size: 14.5px;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.placement-card h6 {
+  font-size: 14px;
+  color: #00bfa6;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-img {
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 16px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}

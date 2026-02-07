@@ -1,0 +1,171 @@
+/* ===== TOP HEADER ===== */
+.top-header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 70px;
+}
+
+.college-text h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.college-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== MENU BAR ===== */
+.menu-bar {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* menu button */
+/* ALL menu buttons same behaviour */
+.menu-btn {
+  background: #dbd2a4cf;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+
+  display: inline-flex;        /* ✅ SAME LINE */
+  align-items: center;         /* ✅ VERTICALLY CENTER */
+  justify-content: center;
+  height: 42px;                /* ✅ SAME HEIGHT */
+  box-sizing: border-box;
+}
+
+.menu-btn:hover {
+  background:  #dbd2a4cf;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+  display: inline-flex;        /* ✅ IMPORTANT */
+}
+
+/* hidden by default */
+.dropdown-menu {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.dropdown > .menu-btn {
+  user-select: none;
+}
+
+/* dropdown links */
+/* dropdown links – force single line */
+.dropdown-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+
+  white-space: nowrap;   /* ✅ ekach line */
+  overflow: hidden;      /* extra text hide */
+  text-overflow: ellipsis; /* optional: ... */
+}
+
+
+.dropdown-menu a:hover {
+  background: #f2f2f2;
+}
+
+/* ✅ DESKTOP HOVER */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* ===== ANNOUNCEMENT ===== */
+.announcement {
+  background:  #dbd2a4cf;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: 500;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu-bar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-bar.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  /* dropdown in mobile */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+  }
+
+  /* ❌ hover disable on mobile */
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  /* ✅ open on tap (focus) */
+  .dropdown:focus-within .dropdown-menu {
+    display: flex;
+  }
+}
