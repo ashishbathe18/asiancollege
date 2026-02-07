@@ -3,17 +3,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
 
 import Home from "./components/Home/home";
-import Students from "./components/Students/Students";
+import Students from "./components/Students/students";
 import Academics from "./components/Academics/academics";
-import Examination from "./components/Examination/Examination";
-import IQAC from "./components/IQAC/Placement";
-import Careers from "./components/Careers/Careers";
+import Examination from "./components/Examination/examination";
+import IQAC from "./components/IQAC/placement";
+import Careers from "./components/Careers/careers";
 
 import AboutLayout from "./components/About/AboutLayout";
-import TheCollege from "./components/About/TheCollege";
+import TheCollege from "./components/About/Thecollege";
 
-import Life from "./components/Life/Life";
-import Contact from "./components/Contact/Contact";
+import Life from "./components/Life/life";
+import Contact from "./components/Contact/contact";
 import Footer from "./components/Footer/footer";
 
 function App() {
